@@ -12,9 +12,9 @@ var opacity = $('.astro');
 
 //  timeline one makes the astronaut jump. tl2 and tl3 make his right and left hand rotate with transformOrigin property. see greensock -
 // docs for more info
-timeline.to([astro], 2.5, { y: -200, x: 50, scale: 1.25, ease: Sine.easeOut});
-timeline2.to([rightHand ], 2.5, {x: 0, y: 5, transformOrigin:"top right" , rotation:"-50",  ease: Back.easeOut.config(1.7)}, )
-timeline3.from([leftHand ], 2.5, {x: 10, y: 10, transformOrigin:"top left" , rotation:"50",   ease: Back.easeOut.config(1.7)}, )
+timeline.from([astro], 4.5, { y: -200, x: 50, scale: 1.25, ease: Back.easeOut});
+timeline2.to([rightHand ], 4.5, {x: 0, y: 5, transformOrigin:"top right" , rotation:"-50",  ease: Back.easeOut.config(1.7)}, )
+timeline3.from([leftHand ], 4.5, {x: 10, y: 10, transformOrigin:"top left" , rotation:"50",   ease: Back.easeOut.config(1.7)}, )
 
 
 //pause all tween timeles
@@ -56,14 +56,29 @@ function checkKeyPress(e){
    else if(e.keyCode == "37"){
       $('.astro').classList.toggle("toggle")
    }
+   else if(e.keyCode == "83"){
+      $('.sky-container').classList.toggle("sky-container1")
+   }
 }
 
    var stars = $('.stars')
+   var sky = $('.metro-sign')
+
 
     stars.onclick = function(){
       stars.classList.toggle("stars")
       
  };
+
+  
+
+
+//     planet.onclick = function(){
+//       planet.classList.toggle("flickr")
+      
+//  };
+
+
 
 
    function $ (el) {
