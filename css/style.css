@@ -57,25 +57,20 @@
   http://animista.net/
   Greensock.com */
 
- .blue{
+  /* .blue{
     fill: var(--blue-color);
-    
-}
+    opacity: 0;
+} */
 
-.red{
+ /* .red{
     fill: var(--red-color);
    
-}
+}  */
 
-.dark-red{
+/* .dark-red{
     fill: var(--dark-red-color);
-}
+}  */
 
-.underground{
-  transform: rotate(-10deg);
-  position: absolute;
-  color: white;
-}
 
 /* BACKGROUND STYLING */
 
