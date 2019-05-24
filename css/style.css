@@ -57,9 +57,9 @@
   http://animista.net/
   Greensock.com */
 
-/* .blue{
+ .blue{
     fill: var(--blue-color);
- 
+    
 }
 
 .red{
@@ -71,10 +71,11 @@
     fill: var(--dark-red-color);
 }
 
-.blue:hover{
-    opacity: 1;
-} */
-
+.underground{
+  transform: rotate(-10deg);
+  position: absolute;
+  color: white;
+}
 
 /* BACKGROUND STYLING */
 
@@ -95,7 +96,7 @@
   .twinkling{
     z-index:1;
     animation:move-twink-back 200s ease-out infinite;
-    overflow: hidden;
+  
   }
 
 @keyframes move-twink-back {
@@ -341,24 +342,24 @@
     .wrapper{
         display: grid;
         grid-template-columns: 1fr  1fr;
-        grid-template-rows: minmax(225px, auto);
+        grid-template-rows: minmax(150px, auto);
         
-        height: 100vh;
+        /* height: 100vh; */
     }
 
-    .grid-dummy{
-        display: none ;
-    }
+    /* .grid-dummy{
+        display: none;
+    } */
+
+
 
 
     .astro{
-        height: 6rem;
-        width: 6rem;
+        height: 4rem;
+        width: 4rem;
     }
 
-    .sky-container{
-        
-    }
+   
 
     .planet{
         width: 15.25rem;
@@ -393,13 +394,13 @@
     .grid-item--6{
         grid-column-start: span 4;
         background: white;
-        height: 5.375rem; 
+        height: 20vh; 
     }
 
     .grid-item--1{
         grid-row: 1 / span 3;
         background: white;
-        width: 3rem;
+        width: 5rem;
     }
 
 
@@ -419,6 +420,40 @@
         display: none;
     }
 
+    .sky-container {
+      width: 15rem;
+      height: 15rem;
+      clip-path: circle(50% at 50% 50%);
+      border-radius: 50%;
+      transform: rotateZ(115deg);
+      position: absolute;
+      z-index: 1;
+      right: 400px;
+      bottom: 100px;
+      opacity: 0;
+      justify-self: center;
+    }
+  
+  .sky-container1 {
+      width: 15rem;
+      height: 15rem;
+      left: 10rem;
+      clip-path: circle(50% at 50% 50%);
+      border-radius: 50%;
+      transform: rotateZ(115deg);
+      position: absolute;
+      z-index: -1;
+      right: 400px;
+      bottom: 100px;
+      opacity: 1;
+      justify-self: center;
+    }
+  
+
+    .grid-item--6{
+      
+    }
+      
     .astro{
         height: 8rem;
         width: 8rem;
@@ -426,7 +461,7 @@
 
     .wrapper{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: minmax(150px, auto);
         height: 100%;
     }
@@ -453,6 +488,11 @@
 
 @media only screen and (max-width: 768px){
 
+  .astro{
+    height: 8rem;
+    width: 8rem;
+}
+
 
     .grid-item--6{
         grid-column-start: span 4;
@@ -472,11 +512,10 @@
     }
 
     .wrapper{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: minmax(180px, auto);
-        
-        height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: minmax(700px, auto);
+      height: 100vh;
     }
 
     .planet{
@@ -504,10 +543,41 @@
         width: 10rem;   
     }
 
+    /* .sky-container {
+      width: 15rem;
+      height: 15rem;
+      clip-path: circle(50% at 50% 50%);
+      border-radius: 50%;
+      transform: rotateZ(115deg);
+      position: absolute;
+      z-index: 1;
+      right: 400px;
+      bottom: 100px;
+      opacity: 0;
+      justify-self: center;
+    }
+  
+  .sky-container1 {
+      width: 15rem;
+      height: 15rem;
+      left: 20rem;
+      clip-path: circle(50% at 50% 50%);
+      border-radius: 50%;
+      transform: rotateZ(115deg);
+      position: absolute;
+      z-index: -1;
+      right: 400px;
+      bottom: 100px;
+      opacity: 1;
+      justify-self: center;
+    } */
+  
+
     .grid-item--6{
         grid-column-start: span 4;
         background: white;
-        height: 20vh; 
+        height: 30vh; 
+        
         
     }
 
@@ -518,10 +588,10 @@
     }
 
     .wrapper{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: minmax(175px, auto);
-        height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: minmax(450px, auto);
+      height: 100%;
     }
 
     .footer{
@@ -572,7 +642,8 @@
     .grid-item--6{
         grid-column-start: span 4;
         background: white;
-        height: 20vh; 
+        height: 20vh;
+         
     }
 
     .grid-item--1{
@@ -596,7 +667,7 @@
     grid-template-columns: 100px 500px 1fr;
     /* grid-template-rows: repeat(3, 1fr); */
     /* grid-template-rows: minmax(150px, auto); */
-    grid-template-rows: 30% 40% 10%;
+    grid-template-rows: 30% 40% 25%;
     height: 100vh;
     
     }
@@ -617,5 +688,56 @@
         align-self: start;
     }
 
+    .sky-container {
+      width: 20rem;
+      height: 20rem;
+      clip-path: circle(50% at 50% 50%);
+      border-radius: 50%;
+      transform: rotateZ(115deg);
+      position: absolute;
+      z-index: 1;
+      right: 400px;
+      bottom: 300px;
+      opacity: 0;
+      justify-self: center;
+    }
+  
+  .sky-container1 {
+      width: 20rem;
+      height: 20rem;
+      left: 20rem;
+      clip-path: circle(50% at 50% 50%);
+      border-radius: 50%;
+      transform: rotateZ(115deg);
+      position: absolute;
+      z-index: -1;
+      right: 400px;
+      bottom: 100px;
+      opacity: 1;
+      justify-self: center;
+    }
+  
+
+
+  }
+
+
+  @media only screen and (min-width: 2560px){
+
+    .footer{
+      margin-left: 6.9375rem;
+      font-size: 4.3em;
+      font-family: "P22 Underground";
+      transition: transform 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+      align-self: start;
+  }
+  
+      .footer-1{
+          margin-left: 10rem;
+          font-size: 4.3em;
+          font-family: "P22 Underground";
+          transition: transform 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+          align-self: start;
+      }
 
   }
