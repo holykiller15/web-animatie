@@ -8,6 +8,7 @@ De poster van Surrealist Man Ray's uit 1938 is een simpele poster bestaande uit 
 Philosophie achter de poster:
 "Commissioned by London Transport whilst Man Ray was in the capital in 1938, the poster transforms the Underground’s classic roundel logo into a mysterious flying object next to the planet Saturn. The slogan reads “— Keeps London Going”, a reference we imagine to the stellar work done from day one by London Transport in keeping city dwellers moving around London? "
 <br>
+<br>
 Voor mijn concept heb ik besloten om dit poster tot leven te brengen door een bewegende flow in de achtergrond te zetten. De astronaut springt in de ruimte terwijl de achtergrond aan het bewegen is. Dit representeert de metro diensten die dag en nacht doorrijden. Daarnaast heb ik een animatie op de tekst gezet die in dezelfde flow zich animeert samen met schietend sterren. Qua Typografie heb ik de font-family (P22 Underground) gebruikt. Dit is een sans-serif font die bij de metro logos van London gebruikt worden.
 <br>
 <br>
