@@ -61,7 +61,7 @@ function checkKeyPress(e){
    }
 }
 
-   var stars = $('.stars')
+   var stars = $('.bg-1')
    var sky = $('.metro-sign')
 
 
