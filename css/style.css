@@ -9,6 +9,40 @@
   /* CSS GRID STYLING */
 
 
+  a.button1{
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--main-font);
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+  }
+
+  a.button1:hover{
+    color: #000000;
+    background-color: #FFFFFF;
+  }
+
+  @media all and (max-width: 30em){
+    a.button1{
+      display:block;
+      margin: 0.4em auto;
+    }
+  }
+ 
+
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
 .wrapper{
     /* width: 50vw;
     margin: 0 auto; */
@@ -52,40 +86,69 @@
     
 }
 
-/* 
-  -https://css-tricks.com/
-  http://animista.net/
-  Greensock.com */
+.grid-item--4{
+  justify-self: center;
+  align-items: center;
+}
 
-  /* .blue{
-    fill: var(--blue-color);
-    opacity: 0;
-} */
-
- /* .red{
-    fill: var(--red-color);
-   
-}  */
-
-/* .dark-red{
-    fill: var(--dark-red-color);
-}  */
 
 
 /* BACKGROUND STYLING */
 
+.scale-metro:hover{
+  transform: scale(1.2);
+  filter: drop-shadow( 10px 10px 10px red );
+  -webkit-animation: vibrate-1 2s linear infinite both;
+	        animation: vibrate-1 2s linear infinite both;
+}
+
+.planet-scale:hover{
+  transform: scale(1.2);
+  filter: drop-shadow( 10px 10px 20px blue );
+  -webkit-animation: vibrate-1 2s linear infinite both;
+	        animation: vibrate-1 2s linear infinite both;
+}
+
+
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 3px);
+            transform: translate(-3px, 3px);
+  }
+  40% {
+    -webkit-transform: translate(-3px, -3px);
+            transform: translate(-3px, -3px);
+  }
+  60% {
+    -webkit-transform: translate(3px, 3px);
+            transform: translate(3px, 3px);
+  }
+  80% {
+    -webkit-transform: translate(3px, -3px);
+            transform: translate(3px, -3px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
 .bg-1{
+   
+    background:#000 url(https://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+    z-index:0;
+}
+
+.stars {
     background: black;
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
     margin: 0px;
-}
-
-.stars {
-    background:#000 url(https://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-    z-index:0;
-   
   }
 
   .twinkling{
@@ -128,38 +191,39 @@
 .planet{
     width: 31.25rem;
     height: 31.25rem;
+    transition: all .2s;
 }
 
 
 
 .sky-container {
-    width: 20rem;
-    height: 20rem;
-    clip-path: circle(50% at 50% 50%);
-    border-radius: 50%;
-    transform: rotateZ(115deg);
-    position: absolute;
-    z-index: 1;
-    right: 400px;
-    bottom: 100px;
-    opacity: 0;
-    justify-self: center;
-  }
+  width: 100vw;
+  height: 100vh;
+  /* clip-path: circle(50% at 50% 50%); */
+  /* border-radius: 50%; */
+  /* transform: rotateZ(115deg); */
+  position: absolute;
+  z-index: 1;
+  /* right: 400px;
+  bottom: 300px; */
+  opacity: 0;
+  justify-self: center;
+}
 
 .sky-container1 {
-    width: 20rem;
-    height: 20rem;
-    left: 20rem;
-    clip-path: circle(50% at 50% 50%);
-    border-radius: 50%;
-    transform: rotateZ(115deg);
-    position: absolute;
-    z-index: -1;
-    right: 400px;
-    bottom: 100px;
-    opacity: 1;
-    justify-self: center;
-  }
+  width: 100vw;
+  height: 100vh;
+  
+  /* clip-path: circle(50% at 50% 50%);
+  border-radius: 50%;
+  transform: rotateZ(115deg); */
+  position: absolute;
+  z-index: -1;
+  /* right: 400px;
+  bottom: 100px; */
+  opacity: 1;
+  justify-self: center;
+} 
 
 
   
@@ -247,7 +311,7 @@
     }
     
     30% {
-      width: 100px;
+      width: 200px;
     }
     
     100% {
@@ -332,7 +396,9 @@
 
 /* MEDIA QUERIES SOURCE https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 425px) {
+
+  
    
     .wrapper{
         display: grid;
@@ -341,12 +407,6 @@
         
         /* height: 100vh; */
     }
-
-    /* .grid-dummy{
-        display: none;
-    } */
-
-
 
 
     .astro{
@@ -410,10 +470,13 @@
 
   }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 425px) {
+
     .grid-item--3{
         display: none;
     }
+
+
 
     .sky-container {
       width: 15rem;
@@ -482,6 +545,8 @@
   }
 
 @media only screen and (max-width: 768px){
+
+  
 
   .astro{
     height: 8rem;
@@ -623,21 +688,32 @@
 
   @media only screen and (min-width: 1024px){
 
+   
+
     .metro-sign {
         width: 12.5rem ;
         height: 12.5rem;
-    
+    }
+
+    .scale-metro:hover{
+      transform: scale(1.2);
+      filter: drop-shadow( 10px 10px 10px red );
+      -webkit-animation: vibrate-1 2s linear infinite both;
+              animation: vibrate-1 2s linear infinite both;
     }
 
     .astro{
-        height: 12.5rem;
-        width: 12.5rem;   
+        height: 10.5rem;
+        width: 10.5rem;   
     }
     
     .grid-item--6{
         grid-column-start: span 4;
         background: white;
         height: 20vh;
+        width: 100%;
+        margin-bottom: 0;
+        overflow: hidden;
          
     }
 
@@ -648,27 +724,23 @@
     }
 
     .planet{
-        width: 31.25rem;
-        height: 31.25rem;
+        width: 25.25rem;
+        height: 25.25rem;
         margin-top: 50px;
         /* position: absolute; */
         
     }
 
     .wrapper{
-         /* width: 50vw;
-    margin: 0 auto; */
     display: grid;
     grid-template-columns: 100px 500px 1fr;
-    /* grid-template-rows: repeat(3, 1fr); */
-    /* grid-template-rows: minmax(150px, auto); */
-    grid-template-rows: 30% 40% 25%;
-    height: 100vh;
-    
+    grid-template-rows: 30% 35% 5% ;
+    transition: all .2s;
+  
     }
 
     .footer{
-    margin-left: 5.9375rem;
+    margin-left: 3.9375rem;
     font-size: 3.3em;
     font-family: "P22 Underground";
     transition: transform 1s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -684,34 +756,34 @@
     }
 
     .sky-container {
-      width: 20rem;
-      height: 20rem;
-      clip-path: circle(50% at 50% 50%);
-      border-radius: 50%;
-      transform: rotateZ(115deg);
+      width: 500px;
+      height: 50vh;
+      /* clip-path: circle(50% at 50% 50%); */
+      /* border-radius: 50%; */
+      /* transform: rotateZ(115deg); */
       position: absolute;
       z-index: 1;
-      right: 400px;
-      bottom: 300px;
+      /* right: 400px;
+      bottom: 300px; */
       opacity: 0;
       justify-self: center;
     }
   
-  .sky-container1 {
-      width: 20rem;
-      height: 20rem;
-      left: 20rem;
-      clip-path: circle(50% at 50% 50%);
+   .sky-container1 {
+    width: 500px;
+    height: 50vh;
+      /* left: 20rem; */
+      /* clip-path: circle(50% at 50% 50%);
       border-radius: 50%;
-      transform: rotateZ(115deg);
+      transform: rotateZ(115deg); */
       position: absolute;
       z-index: -1;
-      right: 400px;
-      bottom: 100px;
+      /* right: 400px;
+      bottom: 100px; */
       opacity: 1;
       justify-self: center;
-    }
-  
+    } 
+   
 
 
   }

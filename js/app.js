@@ -1,7 +1,7 @@
-var timeline = new TimelineMax({repeat:-1, paused:true, yoyo:true });
-var timeline2 = new TimelineMax({repeat:-1, paused:true, yoyo:true });
-var timeline3 = new TimelineMax({repeat:-1, paused:true, yoyo:true });
-var timeline4 = new TimelineMax({repeat: 0, paused:true, yoyo:true });
+var timeline = new TimelineMax({repeat:-1, paused:false, yoyo:true });
+var timeline2 = new TimelineMax({repeat:-1, paused:false, yoyo:true });
+var timeline3 = new TimelineMax({repeat:-1, paused:false, yoyo:true });
+var timeline4 = new TimelineMax({repeat: 0, paused:false, yoyo:true });
 
 
 //acces classes with jquery $ selector
@@ -61,14 +61,44 @@ function checkKeyPress(e){
    }
 }
 
+
+   var play = $('.play')
+   var pause = $('.pause')
+   var off = $('.off')
+   var restart = $('.restart')
+   var shootingStars = $('.stars')
+
+   play.onclick = function(){
+      startJump()
+ };
+ 
+   pause.onclick = function(){
+      pauseJump()
+ };
+
+   restart.onclick = function(){
+      restartJump()
+ };
+
+   off.onclick = function(){
+      $('.astro').classList.toggle("toggle")
+ };
+
+ shootingStars.onclick = function(){
+      $('.sky-container').classList.toggle("sky-container1")
+ };
+ 
+
    var stars = $('.bg-1')
    var sky = $('.metro-sign')
+   var planet = $('.planet')
 
 
-    stars.onclick = function(){
+    planet.onclick = function(){
       stars.classList.toggle("stars")
       
  };
+ 
 
   
 
